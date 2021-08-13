@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startingActivity">
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="28dp"
+        android:layout_toEndOf="@+id/layoutDate"
+        android:layout_toRightOf="@+id/layoutDate"
+
+        android:gravity="center"
+        android:text=">>>"
+        android:textColor="@android:color/white" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutDate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="20dp"
+        android:maxDate="31/31/2019"
+        android:minDate="01/01/2019"
+        android:soundEffectsEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/layoutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentTop="true"
+
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtDay"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="#fbfbfb"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Ден"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/txtMonth"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/layoutDate"
+            android:background="#fbfbfb"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Месец"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/sign2"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/layoutDate"
+            android:layout_weight="1"
+            android:text=" / "
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMaxDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="448dp"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        app:fontFamily="sans-serif-black" />
+
+</RelativeLayout>
